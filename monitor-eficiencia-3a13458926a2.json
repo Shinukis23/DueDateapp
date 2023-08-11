@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "monitor-eficiencia",
+  "private_key_id": "3a13458926a2e33079467f285a368f6d20b88646",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2nm/IxDl2dy3i\nKHMfq33PHum8xQpXtzKtwjwV/OCLJZPg1FamtKEyaI/IlDtI/Fk7Jw6xhWy5diS+\nMA7+q/rgGGhK+tFycvvgz0TiPYnKcSOtjicgX/zJ63Ukf4oDh2WfunWQyTPDeDmY\n4y/pMPAWo/sLBv2CN+SQpDJOGcNPC9SALxE1vf+u86cDjUsxp8SMJeQP2VuWPfjM\nhBa3USHNI0ZaQIoI0RCP5Fm6VY0+FhdKAU0g7qPjowJXGV7Mbe3a3/oNLWIkDeGQ\nQpA5lb23E1uAOiiFg8Wp64CwqlSXK95fo4y7WFRdSor8LVVc89cURXbhqwpWL4kM\n53x82zyHAgMBAAECggEAVZ1/4MsF+aE0NLQsDOv0Zpcik+p4x9jOfKH0U4ajqviq\nFJzYJv3GGQDmb+32wWf1WYMdI2LfLy/RWAzl6sWsL0WiF4zxhsubhLEHpV2ebPeP\n930OoOH/fJbT65GTncXrgfAD0CZUC08hCalxO81Csgqc1nWnglY75QflwbHYXATv\nzGHORyirsekUDld60iM+xnlsbQxjfeo7yA5Fkqxhh1O77Zu16EtEHAz9YBZ1cyvc\n7wEFCeO07J2TcqLaVhpaSHoG/Oe0XYC4mj7+t1f6xdCQ80Xmb+ewPAW+hosJ2zNt\nGX6GdCPt8V6jJTdUnLoqi9CR+0GxyvutpWBtNtHMeQKBgQDj/0yN187zh+bdkAoi\n+Amsv/hn4qs5AcY8cMB/Y9LoBLTz/WzE567BzRKIER9fEzspN0PhGsOReMNwpKVZ\n66Gr8fqs1RuEIy3XyW3CnBxZxHdZHLmezDdDgy0oz2Ng0abEAvLjvvDHO1kWyP0u\nUtZTcbAIojc9yR8fWBLXKQ2FIwKBgQDNDFlHrUvZqgwUOAjCT78pzii2MCgBrsps\nwrrrrfZJrsqQG6hSo8LlE1jrH3O9p8yF6pBDJe6O76oJIDl4cWkHWqIIoXjMVoCN\nh8/BGyO8mgVgog0vJgWTvhgVGum/ViCbxman6fZviPAxBTu3/Y1xlpOMoLBwUZhJ\nGlapUPqbTQKBgHUe9rJ+w/7yNzRmA+8Gv+GQFAk5tX9pW+48dYZ7PyKVGGemLbPQ\n2EMSF4zyTs1GUcPQcfw3BXO7N5qr2Y0hsEFl4sHaD3KHp8sL3Gh2TVIHzM9oJCpg\n+ZqizhYCwyg/So2yfhdkRMfzwsYjpXugbh0bb7RfsET7BhPR6IvCuQFFAoGAYP2u\nXZFDh7o/7HB09DT0n7m82DD/O4yKg9e4wzKOhVwAxRnQDQcZcXItZUqDXPq6a74A\nb0LKDSKgs6Biju5WV/wvGRYIJd/k/w124EkOJnBUitkck2jQyonoqlMIrlD3K7g1\nZsfsoeWMeCOZk/aDqW8obCS2UOrHtgyXYY/EeyECgYEAu7S13jG7nMIpsHljq+1R\nHVfXLX1VodV9REljmD6f55Xb3avLtM6/z/vU37HgRRiBy3bHCPR2rRUPvPhs31HF\nQQruXtEKikt+ysdPe4BFda3RrYEoxpCm3sS2Y6CQFHzSV0dFExzmWaFLpTM51YzS\n/1DjqqMA9APaoYU84WnecJY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "monitoreoeficiencia@monitor-eficiencia.iam.gserviceaccount.com",
+  "client_id": "104757395854942971650",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/monitoreoeficiencia%40monitor-eficiencia.iam.gserviceaccount.com"
+}
