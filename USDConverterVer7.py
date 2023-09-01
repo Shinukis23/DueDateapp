@@ -18,6 +18,7 @@ import pandas as pd
 import numpy as np
 import xlwt
 import gspread
+import locale
 import pygsheets
 from oauth2client.service_account import ServiceAccountCredentials
 import json
@@ -59,9 +60,10 @@ scopes = [
 proxies = {'https': 'http:tapaserver.dyndns.org'}
 credentials = ServiceAccountCredentials.from_json_keyfile_name("monitor-eficiencia-3a13458926a2.json", scopes) #access the json key you downloaded earlier 
 file = gspread.authorize(credentials)# authenticate the JSON key with gspread
-#ss = file.open("EficienciaReporte")
+ss = file.open("EficienciaReporte") #1
 # Define the Drive API client
-service = build("drive", "v3", credentials=credentials,static_discovery=False)
+service = build('drive', 'v3', credentials=credentials)
+
 url3 = "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=6&accion=consultarCuadro&idCuadro=CF102&locale=es"
 html = sess.get(url3).content
 df_list = pd.read_html(html)
@@ -74,12 +76,13 @@ i = 1
 super_user = 0 
 result = ""
 result1 = ""
-
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 DOF = url = URL = page = soup = texto = "" 
 diff = 0.0
 data = []
 fechas = []
 dates = ''
+
 cambio = 0
 entry1 = 0
 Tipo_Cambio = 0.0
@@ -259,6 +262,8 @@ def subir():
     global i
     global DOF
     #print('subir',result)
+    pacifictime = datetime.now(pytz.timezone('US/pacific'))
+    current_time = pacifictime.strftime("%Y-%m-%d %H:%M:%S")
     Tipo_Cambio = float(result)
     if control == 1:
         T_Cambio = tk.Label(main_window,font=("times", 10, "bold"),fg="green",text=Tipo_Cambio).place(x=270,y=16)  
@@ -274,7 +279,10 @@ def subir():
     Mex = Label(main_window,font=("Courier 18 bold"),fg="red", text =float("{:.4f}".format(PrecioMex))).place(x = 34,y = 130)
     USD = Label(main_window,font=("Courier 18 bold"),fg="red", text =float("{:.4f}".format(PrecioUSD))).place(x = 34,y = 180)
     orden.set('')
-    #hoja.append_row(data)  
+    data.clear()
+    data.extend([selected,"-",current_time,"-","-","-","-","-","-",Tipo_Cambio,PrecioPower,locale.currency(PrecioUSD, grouping=True),locale.currency(PrecioMex, grouping=True)]) # 1
+    hoja.append_row(data)  #1
+    
     data.clear() 
     entry1.config(state= "normal")# habilitar cuando este lita la subida
         
@@ -315,6 +323,7 @@ def login():
         if password == users[selected]:
             if selected in ["MANUEL RAZO","EMMANUEL LOPEZ","KARLA CRUZ","MIGUEL CERVANTES","JUAN ORTIZ"]:
                super_user = 1
+             
             login_window.destroy()
             #main_program(super_user)
         else:
@@ -349,6 +358,7 @@ def login():
     
 selected_user = ""
 login()
+hoja = ss.worksheet(selected)  
 main_window = tk.Tk()
 main_window.title("Tipo de Cambio")
 main_window.geometry("330x250")
