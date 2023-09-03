@@ -496,7 +496,7 @@ def main_program(super_user,hoja):
 
 
     def check_export():
-        ExportFile()
+        #ExportFile()
         ###output_path = 'PartesExportacion.csv'
         ###gdown.download(url1, output_path, quiet=False,fuzzy=True)
         ###dfpartes = pd.read_csv(r'PartesExportacion.csv')
@@ -771,7 +771,7 @@ def main_program(super_user,hoja):
     main_window.resizable(False, False)
     #Display image
     image = Image.open("logo-new.png")
-    image = image.resize((70,30), Image.ANTIALIAS)
+    image = image.resize((70,30), Image.LANCZOS)
     image = ImageTk.PhotoImage(image)
     label_image = tk.Label(image=image).place(x=0,y=1)
 
@@ -985,12 +985,12 @@ def login():
     login_window.resizable(False, False)
 
     imag = Image.open("logo-new.png")
-    imag1 = imag.resize((130,80), Image.ANTIALIAS)
+    imag1 = imag.resize((130,80), Image.LANCZOS)
     imag1 = ImageTk.PhotoImage(imag1)
     label_image2 = tk.Label(image=imag1).place(x=0,y=40)
 
     image = Image.open("motor.png")
-    image1 = image.resize((150,110), Image.ANTIALIAS)
+    image1 = image.resize((150,110), Image.LANCZOS)
     image1 = ImageTk.PhotoImage(image1)
     label_image1 = tk.Label(image=image1).place(x=160,y=20)
    
